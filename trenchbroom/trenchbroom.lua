@@ -10,7 +10,7 @@
 ---@return string
 function remove_in_raw_special_chars2(obj)
   if obj~=nil then
-    return obj:gsub('[%p%c%s]', '')
+    return obj:gsub('[%c]', '')
   end
   return nil
 end
