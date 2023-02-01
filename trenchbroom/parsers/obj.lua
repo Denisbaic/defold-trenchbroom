@@ -99,7 +99,7 @@ function parser.parse(obj_path)
     local builder = obj_builders[prefix]
 
     if builder ~= nil then 
-      local raw = line:match(prefix .. '%s(.*)')
+      local raw = remove_in_raw_special_chars2(line:match(prefix .. '%s(.*)'))
       builder(obj, raw)
     end
   end
